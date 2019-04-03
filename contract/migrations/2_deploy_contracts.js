@@ -1,5 +1,5 @@
-var ApprovalContract = artifacts.require("ApprovalContract");
+var ApprovalContract=artifacts.require("ApprovalContract");
 
-module.exports = function(deployer) {
+module.exports= function(deployer){
   deployer.deploy(ApprovalContract);
 }

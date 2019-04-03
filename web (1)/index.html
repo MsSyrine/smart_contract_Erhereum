@@ -8,10 +8,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="custom.css">
-    <title>Our little escrow Dapp</title>
+    <title>Our little PFA Dapp</title>
   </head>
   <body>
-    <h1>Welcome to escrow dapp.</h1>
+    <h1>Welcome to our dapp.</h1>
 
     <h2>Send money through contract:</h2>
     <form id="contract-form">
@@ -60,7 +60,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script>
-    var contractAddress = '0x345ca3e014aaf5dca488057592ee47305d9b3e10';
+    var contractAddress = '0x9c77b3F593D727A12eFC1A3ba428f9B064aa92dF';
     if ( typeof web3 != 'undefined') {
       web3 = new Web3(web3.currentProvider);
     } else {
@@ -92,8 +92,11 @@
         return;
       }
 
+//the following function is for handling the deposit function;which is the heart of our dapps
+//send is for sending the ether
+//the gas argument is optional
       ApprovalContract.methods.deposit(toAddress).send({from: fromAddress, gas: 100000, value: web3.utils.toWei(amount,'ether')},
-        function(error, result) {
+        function(error, result) {//error handler function
           if (error) {
             console.log('error: ' + error);
               $('#deposit-result').html('Error: ' + error);
@@ -121,7 +124,7 @@
         $('#approve-form').submit(function() {
           event.preventDefault();
 
-          ApprovalContract.methods.approve().call({from: '0xC5fdf4076b8F3A5357c5E395ab970B5B54098Fef', gas: 100000},
+          ApprovalContract.methods.approve().call({from: '0x31C99b4163E8b6E5D9E52e862AcB8B069E5A628B', gas: 100000},
               function(error, result) {
                 if (error) {
                   console.log('error: ' + error);

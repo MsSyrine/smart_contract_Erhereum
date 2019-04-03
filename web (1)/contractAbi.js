@@ -11,7 +11,8 @@ var abi = [
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x141a8dd8"
     },
     {
       "constant": true,
@@ -25,7 +26,8 @@ var abi = [
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "signature": "0x67e404ce"
     },
     {
       "constant": true,
@@ -39,16 +41,8 @@ var abi = [
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [],
-      "name": "constructor",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xf7260d3e"
     },
     {
       "constant": false,
@@ -62,7 +56,8 @@ var abi = [
       "outputs": [],
       "payable": true,
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "signature": "0xf340fa01"
     },
     {
       "constant": true,
@@ -76,7 +71,8 @@ var abi = [
       ],
       "payable": false,
       "stateMutability": "pure",
-      "type": "function"
+      "type": "function",
+      "signature": "0xd93ce89c"
     },
     {
       "constant": false,
@@ -85,6 +81,7 @@ var abi = [
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "function",
+      "signature": "0x12424e3f"
     }
   ];
