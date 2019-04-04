@@ -138,6 +138,7 @@
         $('#approver-form').submit(function() {
           event.preventDefault();
 
+
           ApprovalContract.methods.viewApprover().call(
               function(error, result) {
                 if (error) {
@@ -148,6 +149,14 @@
                   $('#approver-display').html('Approver Address: <b>' + result + '</b>');
                 }
               });
+        });
+
+
+
+
+        ApprovalContract.methods.deposit(toAddress).send({from: fromAddress})
+            .on('transactionHash', function(hash){
+                console.log(hash);
         });
 
     </script>
